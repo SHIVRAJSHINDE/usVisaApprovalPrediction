@@ -1,4 +1,5 @@
 
+import pandas as pd
 
 from us_visa.pipline.training_pipeline import TrainPipeline
 
