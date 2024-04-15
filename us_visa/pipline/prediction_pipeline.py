@@ -1,6 +1,7 @@
 import os
 import sys
 
+
 import numpy as np
 import pandas as pd
 from us_visa.entity.config_entity import USvisaPredictorConfig
@@ -9,6 +10,8 @@ from us_visa.exception import USvisaException
 from us_visa.logger import logging
 from us_visa.utils.main_utils import read_yaml_file
 from pandas import DataFrame
+
+
 
 
 class USvisaData:
@@ -25,8 +28,8 @@ class USvisaData:
                 company_age
                 ):
         """
-        Usvisa Data constructor
-        Input: all features of the trained model for prediction
+            Usvisa Data constructor
+            Input: all features of the trained model for prediction
         """
         try:
             self.continent = continent
@@ -46,7 +49,7 @@ class USvisaData:
 
     def get_usvisa_input_data_frame(self)-> DataFrame:
         """
-        This function returns a DataFrame from USvisaData class input
+            This function returns a DataFrame from USvisaData class input
         """
         try:
             
@@ -59,7 +62,7 @@ class USvisaData:
 
     def get_usvisa_data_as_dict(self):
         """
-        This function returns a dictionary from USvisaData class input 
+            This function returns a dictionary from USvisaData class input 
         """
         logging.info("Entered get_usvisa_data_as_dict method as USvisaData class")
 
@@ -89,7 +92,7 @@ class USvisaData:
 class USvisaClassifier:
     def __init__(self,prediction_pipeline_config: USvisaPredictorConfig = USvisaPredictorConfig(),) -> None:
         """
-        :param prediction_pipeline_config: Configuration for prediction the value
+            :param prediction_pipeline_config: Configuration for prediction the value
         """
         try:
             # self.schema_config = read_yaml_file(SCHEMA_FILE_PATH)
@@ -99,8 +102,8 @@ class USvisaClassifier:
 
     def predict(self, dataframe) -> str:
         """
-        This is the method of USvisaClassifier
-        Returns: Prediction in string format
+            This is the method of USvisaClassifier
+            Returns: Prediction in string format
         """
         try:
             logging.info("Entered predict method of USvisaClassifier class")
